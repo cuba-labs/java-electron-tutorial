@@ -1,0 +1,13 @@
+{
+  "name": "demo-app",
+  "version": "0.1.0",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "electron-package": "^0.1.0"
+  },
+  "dependencies": {
+    "minimal-request-promise": "^1.5.0",
+    "tree-kill": "^1.2.0"
+  }
+}

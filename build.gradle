@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'javax.servlet:javax.servlet-api:3.0.1'
+    compile 'com.vaadin:vaadin-server:8.1.6'
+    compile 'com.vaadin:vaadin-push:8.1.6'
+    compile 'com.vaadin:vaadin-client-compiled:8.1.6'
+    compile 'com.vaadin:vaadin-themes:8.1.6'
+
+    compile 'org.eclipse.jetty:jetty-server:9.3.20.v20170531'
+    compile 'org.eclipse.jetty:jetty-webapp:9.3.20.v20170531'
+    compile 'org.eclipse.jetty:jetty-continuation:9.3.20.v20170531'
+}
+
+applicationName = 'demo'
+mainClassName = 'demo.Launcher'

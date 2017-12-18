@@ -339,6 +339,8 @@ Finally, we can start the application:
 
 It is alive!
 
+In fact, any Java application can be started using this approach, you can run your existing Spring Boot application or tomcat with a deployed WAR file. There is no limitation to use only Vaadin! Feel free to start your favorite backend!
+
 ## Periphery integration
 
 Well, it seems that this really simple example does work, but how we can employ peripheral devices or communicate with OS?

@@ -1,8 +1,8 @@
 # Java Electron Tutorial
 
-## Getting started
-
 In this short enough tutorial I will show you how to craft your own Java Desktop toolkit on top of Electron, Jetty and Vaadin.
+
+## Getting started
 
 We will start with Gradle build system and Node.js installation. Download and install the latest stable version of Gradle: https://gradle.org/releases/ and Node.js: https://nodejs.org/en/download/
 
@@ -102,7 +102,7 @@ Open http://localhost:8080/app in your favorite web browser. That was easy!
 
 At the moment we have pretty standard web application, it can be deployed to server or we can give it to Desktop users and servlet container (Tomcat, for instance) and make them use it from a web browser.
 
-##How to embed Jetty into Java applications
+## How to embed Jetty into Java applications
 
 We will gradually transform our application into Desktop form. First step - get rid of WAR and external servlet container.
 
@@ -169,7 +169,7 @@ The application will be accessible on http://localhost:8080. Moreover, we can bu
 
 > gradle distZip
 
-##Simple Electron application
+## Simple Electron application
 
 A basic Electron app consists of three files: `package.json` (metadata), `main.js` (code) and `index.html` (graphical user interface). The framework is provided by the Electron executable file (electron.exe in Windows, electron.app on macOS and electron on Linux).
 
@@ -241,7 +241,8 @@ NPM will download and install electron to your PC. Let’s start it!
 
 At the moment, we got all the pieces of the puzzle sitting right there on the table. Now all we have to do is put them in the right order.
 
-Bring all together
+## Bring all together
+
 First, simply remove src/main/electron/index.html file. We will open our application UI right on the application start.
 
 Then, build the application using Gradle and install it to the build/install directory:

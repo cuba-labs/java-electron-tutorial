@@ -341,7 +341,7 @@ It is alive!
 
 ## Periphery integration
 
-Well, it seems that this really simple example does work, but how about the problems stated at the beginning of the post? How we can employ peripheral devices or communicate with OS?
+Well, it seems that this really simple example does work, but how we can employ peripheral devices or communicate with OS?
 
 Since we have full featured Java process we can easily write/read local files and use all the features of OS. For instance, let’s print OS info to a local printer.
 

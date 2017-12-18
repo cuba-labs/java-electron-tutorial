@@ -32,7 +32,7 @@ Previously, I’ve already told you about our experience with Vaadin in the blog
 
 For me, It is battle proven Java framework that enables us to build complex UI without a single line of HTML and JS. Let’s employ it as a basis for our UI.
 
-I will create a simple Vaadin application from scratch. First, we need to add necessary dependencies to build.gradle script, enable war and gretty plugins:
+I will create a simple Vaadin application from scratch. First, we need to add necessary dependencies to build.gradle script, enable `war` and `gretty` plugins:
 ```java
 plugins {
    id 'org.akhikhl.gretty' version '2.0.0'
@@ -132,7 +132,7 @@ applicationName = 'demo'
 mainClassName = 'demo.Launcher'
 ```
 
-I’ve added jetty jars to the project dependencies and replaced war and gretty plugins with application plugin. The only thing left to do is to implement demo.Launcher class.
+I’ve added jetty jars to the project dependencies and replaced `war` and `gretty` plugins with `application` plugin. The only thing left to do is to implement `demo.Launcher` class.
 
 That’s quite easy task because the process of Jetty embedding is already described in the official manual: http://www.eclipse.org/jetty/documentation/current/embedding-jetty.html
 
@@ -245,7 +245,7 @@ At the moment, we got all the pieces of the puzzle sitting right there on the ta
 
 First, simply remove src/main/electron/index.html file. We will open our application UI right on the application start.
 
-Then, build the application using Gradle and install it to the build/install directory:
+Then, build the application using Gradle and install it to the `build/install` directory:
 
 > gradle installDist
 

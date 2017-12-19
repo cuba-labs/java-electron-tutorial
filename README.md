@@ -100,7 +100,7 @@ Open http://localhost:8080/app in your favorite web browser. That was easy!
 
 ![Vaadin UI](/images/image1.png)
 
-At the moment we have pretty standard web application, it can be deployed to server or we can give it to Desktop users and servlet container (Tomcat, for instance) and make them use it from a web browser.
+At the moment we have pretty standard web application, it can be deployed to server or we can give it to Desktop users along with servlet container (Tomcat, for instance) and make them use it from a web browser.
 
 ## How to embed Jetty into Java applications
 

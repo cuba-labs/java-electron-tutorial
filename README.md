@@ -30,7 +30,7 @@ dependencies {
 
 Previously, I’ve already told you about our experience with Vaadin in the blog post: https://vaadin.com/blog/cuba-studio-how-we-use-vaadin-for-our-web-development-tool
 
-For me, It is battle proven Java framework that enables us to build complex UI without a single line of HTML and JS. Let’s employ it as a basis for our UI.
+For me, it is battle-proven Java framework that enables us to build complex UI without a single line of HTML and JS. Let’s employ it as a basis for our UI.
 
 I will create a simple Vaadin application from scratch. First, we need to add necessary dependencies to build.gradle script, enable `war` and `gretty` plugins:
 ```java
@@ -100,7 +100,7 @@ Open http://localhost:8080/app in your favorite web browser. That was easy!
 
 ![Vaadin UI](/images/image1.png)
 
-At the moment we have pretty standard web application, it can be deployed to server or we can give it to Desktop users along with servlet container (Tomcat, for instance) and make them use it from a web browser.
+At the moment we have a pretty standard web application, it can be deployed to server or we can give it to Desktop users along with a servlet container (Tomcat, for instance) and make them use it from a web browser.
 
 ## How to embed Jetty into Java applications
 
@@ -134,7 +134,7 @@ mainClassName = 'demo.Launcher'
 
 I’ve added jetty jars to the project dependencies and replaced `war` and `gretty` plugins with `application` plugin. The only thing left to do is to implement `demo.Launcher` class.
 
-That’s quite easy task because the process of Jetty embedding is already described in the official manual: http://www.eclipse.org/jetty/documentation/current/embedding-jetty.html
+That’s quite an easy task because the process of Jetty embedding is already described in the official manual: http://www.eclipse.org/jetty/documentation/current/embedding-jetty.html
 
 Thus, our Launcher will look as follows:
 ```java
@@ -183,7 +183,7 @@ At this stage, we will create simple electron application without our server sid
 }
 ```
 
-We will show stub HTML page `src/main/electron/index.html`:
+We will show the stub HTML page `src/main/electron/index.html`:
 
 ```html
 <h1>
@@ -239,7 +239,7 @@ NPM will download and install electron to your PC. Let’s start it!
 
 ![Electron UI](/images/image2.png)
 
-At the moment, we got all the pieces of the puzzle sitting right there on the table. Now all we have to do is put them in the right order.
+At the moment, we've got all the pieces of the puzzle sitting right there on the table. Now all we have to do is put them in the right order.
 
 ## Bring all together
 
@@ -309,11 +309,11 @@ const startUp = function () {
 startUp();
 ```
 
-Here we use `minimal-request-promise` package to check if an application has started, install it using NPM (we call npm/npx commands from `src/main/electron` directory):
+Here we use the `minimal-request-promise` package to check if an application has started, install it using NPM (we call npm/npx commands from `src/main/electron` directory):
 
 > npm install minimal-request-promise
 
-In order to stop the Java part we will use `tree-kill` package. Install it:
+In order to stop the Java part, we will use `tree-kill` package. Install it:
 
 > npm install tree-kill
 
@@ -345,7 +345,7 @@ In fact, any Java application can be started using this approach, you can run yo
 
 Well, it seems that this really simple example does work, but how we can employ peripheral devices or communicate with OS?
 
-Since we have full featured Java process we can easily write/read local files and use all the features of OS. For instance, let’s print OS info to a local printer.
+Since we have full-featured Java process, we can easily write/read local files and use all the features of OS. For instance, let’s print OS info to a local printer.
 
 1) First, we create a text document with OS information
 
@@ -400,7 +400,7 @@ if (services.length == 0) {
 }
 ```
 
-4) Finally, document printing method will be:
+4) Finally, the document printing method will be:
 
 ```java
 private void printDocument(Doc doc, PrintRequestAttributeSet aset,
@@ -426,7 +426,7 @@ private void printDocument(Doc doc, PrintRequestAttributeSet aset,
 
 Moreover, there are well-known APIs in Java for calling functions from native libraries, such as JNI or JNA. Thus, there are no restrictions for our application in comparison with web-only apps.
 
-Implementation of the offline mode for this application essentially the same as for any Desktop application - cache data locally using an embedded database, e.g. HSQL, route business logic calls to local data in case of unavailable network and voila!
+Implementation of the offline mode for this application essentially the same as for any Desktop application - cache data locally using an embedded database, e.g. HSQL, route business logic calls to local data in case of unavailable network, and voila!
 
 The full code of the tutorial is available on GitHub: https://github.com/cuba-labs/java-electron-tutorial
 
@@ -469,7 +469,7 @@ private void callElectronUiApi(String[] args) {
 
 ### Use WebSocket for UI to speed up communication and strip useless HTTP headers.
 
-Each time our application handles user event it sends and receives HTTP headers. They are almost useless in our application. Besides, it opens/closes HTTP connection between UI and Java part. We can speed up the communication between browser part and Java UI using WebSocket protocol.
+Each time our application handles a user event, it sends and receives HTTP headers. They are almost useless in our application. Besides, it opens/closes HTTP connection between UI and Java part. We can speed up the communication between browser part and Java UI using WebSocket protocol.
 
 Add org.eclipse.jetty.websocket:websocket-server dependency to build.gradle:
 
@@ -495,7 +495,7 @@ Thanks to Vaadin, that is really easy!
 
 Our application still sends all the static resources through Java servlets using network layer. We can make Electron read them from a file system directly!
 
-As it is described here: https://github.com/electron/electron/blob/master/docs/api/protocol.md we can register custom protocol handler that will intercept requests to /VAADIN/ static files and read them from disk. Remember to unpack static files from jars on build stage!
+As it is described here: https://github.com/electron/electron/blob/master/docs/api/protocol.md We can register custom protocol handler that will intercept requests to /VAADIN/ static files and read them from disk. Remember to unpack static files from jars on build stage!
 
 See full example in:
 - https://github.com/jreznot/electron-java-app/blob/master/build.gradle#L75
@@ -503,7 +503,7 @@ See full example in:
 
 ### Use Gradle Node.JS plugin com.moowork.node instead of manual Node installation
 
-It is much easier to manage Node.js from build script than maintaining separate installation of it on developer machines. See example in: https://github.com/jreznot/electron-java-app/blob/master/build.gradle
+It is much easier to manage Node.js from build script than maintaining separate installation of it on developer machines. See example on: https://github.com/jreznot/electron-java-app/blob/master/build.gradle
 
 ## Real-life application
 

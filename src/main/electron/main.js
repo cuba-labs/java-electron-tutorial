@@ -41,6 +41,8 @@ function createWindow() {
 
         mainWindow.loadURL(appUrl);
 
+        mainWindow.webContents.openDevTools();
+
         mainWindow.on('closed', function () {
             mainWindow = null;
         });
